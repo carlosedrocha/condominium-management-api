@@ -14,7 +14,7 @@ cd your-repository
 Then, install the dependencies:
 
 ```bash
-yarn install
+yarn
 ```
 
 Next, edit the `.env` file with your configurations:
@@ -32,7 +32,7 @@ docker-compose up -d
 After that, apply the Prisma migrations to create the tables in the database:
 
 ```bash
-yarn prisma migrate dev
+npx prisma migrate dev
 ```
 
 Finally, start the NestJS development server with the following command:
