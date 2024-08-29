@@ -1,45 +1,62 @@
 # Backend com NestJS, Docker e Prisma
 
-Este projeto é um servidor backend desenvolvido com NestJS, utilizando Docker para criar um ambiente de desenvolvimento consistente e Prisma como ORM para gerenciar o banco de dados.
+This project is a backend server developed with NestJS, using Docker to create a consistent development environment and Prisma as the ORM to manage the database.
 
-## Instalação
+## Installation
 
-Para instalar, comece clonando este repositório em sua máquina local:
+To install, start by cloning this repository to your local machine:
 
-````bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+```bash
+git clone https://github.com/carlosedrocha/condominium-management-api.git
+cd your-repository
+```
+
+Then, install the dependencies:
 
 ```bash
 yarn install
+```
 
-# Edite o arquivo .env com suas configurações
+Next, edit the `.env` file with your configurations:
+
 ```bash
 cp .env.example .env
+```
 
-# Com o Docker instalado, execute o comando abaixo para iniciar os serviços do Docker:
+With Docker installed, run the following command to start the Docker services:
+
 ```bash
 docker-compose up -d
+```
 
-#Após isso, aplique as migrações do Prisma para criar as tabelas no banco de dados:
+After that, apply the Prisma migrations to create the tables in the database:
+
 ```bash
 yarn prisma migrate dev
+```
 
-#Por fim, inicie o servidor de desenvolvimento do NestJS com o comando:
+Finally, start the NestJS development server with the following command:
+
 ```bash
 yarn start:dev
+```
 
+## NestJs Jwt Authentication with access token and refresh token - Integration and End-to-end tests included
 
+This is an example of how to implement an authentication system in NestJs using passport.js and JSON web tokens (JWT).
 
-# NestJs Jwt Authentication with access token and refresh token - Integration and End-to-end tests included
+Integration tests are included in the `test` folder under the auth module.
 
-This is an example of how to implement an authentication system in NestJs using passport.js, and json web tokens (JWT).
+The end-to-end tests are located in the root `test` folder.
 
-I've included integration tests in the auth module under "test" folder.
-
-The e2e tests on the other hand are in the root test folder.
+To run the integration tests, use the following command:
 
 ```bash
-yarn test # run integration test
-yarn test:e2e # run e2e tests
-````
+yarn test
+```
+
+To run the end-to-end tests, use the following command:
+
+```bash
+yarn test:e2e
+```
